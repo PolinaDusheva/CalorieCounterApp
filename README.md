@@ -116,3 +116,4 @@ For each food item, you should provide:
 - Serving size
 - Calories per serving
 - Optional: protein, carbs, and fats content # CalorieCounterApp
+# CalorieCounterApp
