@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><h1>Calorie Calculator</h1></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container" style="margin-top: 100px;">
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="/" class="logo">CalCounter</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/food-calories-ai">Profile</a></li>
+                <li class="has-dropdown">
+                    <a href="#">Calories</a>
+                    <ul class="dropdown">
+                        <li><a href="/calorie-chart?category=drinks"><span>🍸</span> Drinks</a></li>
+                        <li><a href="/calorie-chart?category=meat"><span>🥩</span> Meat</a></li>
+                        <li><a href="/calorie-chart?category=ham-sausage"><span>🍖</span> Ham & Sausage</a></li>
+                        <li><a href="/calorie-chart?category=fruit"><span>🍎</span> Fruit</a></li>
+                        <li><a href="/calorie-chart?category=vegetables"><span>🥦</span> Vegetables</a></li>
+                        <li><a href="/calorie-chart?category=milk"><span>🥛</span> Milk</a></li>
+                        <li><a href="/calorie-chart?category=cheese"><span>🧀</span> Cheese</a></li>
+                        <li><a href="/calorie-chart?category=fish-seafood"><span>🐟</span> Fish & Seafood</a></li>
+                        <li><a href="/calorie-chart?category=pasta-noodles"><span>🍝</span> Pasta & Noodles</a></li>
+                        <li><a href="/calorie-chart?category=cakes-pies"><span>🍰</span> Cakes & Pies</a></li>
+                        <li><a href="/calorie-chart?category=pizza"><span>🍕</span> Pizza</a></li>
+                        <li><a href="/calorie-chart?category=high-calorie"><span>🔥</span> Food with high calorie</a></li>
+                        <li><a href="/calorie-chart?category=nuts-seeds"><span>🥜</span> Nuts & Seeds</a></li>
+                        <li><a href="/calorie-chart?category=fast-food"><span>🍔</span> Fast Food & Burgers</a></li>
+                        <li><a href="/calorie-chart?category=low-calorie"><span>🥗</span> Food with low calorie</a></li>
+                        <li><a href="/calorie-chart?category=no-calorie"><span>💧</span> Food with no calorie</a></li>
+                        <li><a href="/calorie-chart?category=bread"><span>🍞</span> Bread, Bread Rolls & Pastries</a></li>
+                        <li><a href="/calorie-chart?category=oils-fats"><span>🧈</span> Oils & Fats</a></li>
+                        <li><a href="/calorie-chart?category=snacks"><span>🍟</span> Chips, Popcorn & Snacks</a></li>
+                        <li><a href="/calorie-chart?category=coffee"><span>☕</span> Coffee</a></li>
+                        <li><a href="/calorie-chart?category=tea"><span>🍵</span> Tea</a></li>
+                        <li><a href="/calorie-chart?category=chocolate"><span>🍫</span> Chocolate</a></li>
+                        <li><a href="/calorie-chart?category=cookies"><span>🍪</span> Cookies</a></li>
+                        <li><a href="/calorie-chart?category=candy"><span>🍬</span> Candy</a></li>
+                        <li><a href="/calorie-chart?category=pudding"><span>🍮</span> Pudding</a></li>
+                        <li><a href="/calorie-chart?category=ice-cream"><span>🍦</span> Ice Cream</a></li>
+                        <li><a href="/calorie-chart?category=frozen-yogurt"><span>🍨</span> Frozen Yogurt</a></li>
+                        <li><a href="/calorie-chart?category=salad"><span>🥗</span> Salad</a></li>
+                        <li><a href="/calorie-chart?category=baking"><span>🍞</span> Flour, Grains & Baking Ingredients</a></li>
+                        <li><a href="/calorie-chart?category=sauces"><span>🍯</span> Sauces, Gravy, Dressing & Spreads</a></li>
+                        <li><a href="/calorie-chart?category=supplements"><span>🍼</span> Supplements & Protein Powder</a></li>
+                        <li><a href="/calorie-chart?category=herbs-spices"><span>🌿</span> Herbs, Spices & Tea</a></li>
+                        <li><a href="/calorie-chart?category=sushi"><span>🍣</span> Sushi</a></li>
+                        <li><a href="/calorie-chart?category=vegan"><span>🥜</span> Tofu & Vegan Products</a></li>
+                        <li><a href="/calorie-chart?category=juice"><span>🍹</span> Juice & Soft Drinks</a></li>
+                        <li><a href="/calorie-chart?category=meals"><span>🍽</span> Meals & Dishes</a></li>
+                        <li><a href="/calorie-chart?category=wine"><span>🍷</span> Wine</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="hamburger">☰</button>
+        </nav>
+    </header>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1>Calorie Calculator</h1>
+            <h4>Improving your health and achieving better results</h4>
+            <h6>Enter the food you ate and we will calculate the calories</h6>
+            
+            <div class="mb-3">
+                <textarea id="textInput" class="form-control" rows="4" placeholder="Enter your text here..."></textarea>
+            </div>
+            
+            <button onclick="submitText()" class="btn btn-primary mb-4">Submit</button>
+            
+            <div id="message" class="alert" style="display: none;"></div>
+            
+            <h3>Previous Entries</h3>
+            <div id="previousEntries" class="list-group"></div>
+        </div>
+    </div>
+    <div id="entriesList" class="mt-4"></div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,191 @@
+/* Header and Navbar */
+header, .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+h1{
+    text-align: center;
+    font-family: Cambria;
+    color: rgb(58, 2, 58);
+    font-weight: bold;
+
+};
+h4{
+    text-align: center;
+};
+h6{
+    text-align: center;
+};
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.logo {
+    color: #ff6600;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 1100px;
+    padding: 0;
+}
+
+.nav-menu li {
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-menu > li {
+    position: relative;
+    margin: 0 1rem;
+}
+
+.nav-menu > li > a {
+    color: #222;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.nav-menu > li > a:hover,
+.nav-menu > li.active > a {
+    background: #f5f5f5;
+    color: #ff6600;
+}
+
+/* Dropdown directly under the menu item */
+.has-dropdown {
+    position: relative;
+}
+
+.has-dropdown .dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 320px;
+    max-height: 400px; /* Large height */
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 1rem 0;
+    z-index: 200;
+    border: 1px solid #f5f5f5;
+    overflow-y: auto; /* Enable vertical scroll */
+    list-style: none;
+    margin: 0;
+}
+
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    padding: 0.5rem 1.5rem;
+    color: #222;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown li:hover {
+    background: #f5f5f5;
+    color: #ff6600;
+}
+
+.dropdown li span {
+    font-size: 1.1em;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #222;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 1rem;
+    }
+
+    .dropdown {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding-left: 1rem;
+    }
+
+    .has-dropdown:hover .dropdown {
+        display: none;
+    }
+
+    .has-dropdown.active .dropdown {
+        display: block;
+    }
+}
+
+body {
+    margin: 0;
+    padding-top: 70px; /* Adjust this to your header height */
+} 
