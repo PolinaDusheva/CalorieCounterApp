@@ -4,19 +4,21 @@ header, .navbar {
     top: 0;
     left: 0;
     width: 100%;
-    background: #fff;
+    background: #e3bbc9;
     z-index: 100;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 h1{
     text-align: center;
     font-family: Cambria;
-    color: rgb(58, 2, 58);
+    color: rgb(76, 1, 48);
     font-weight: bold;
 
 };
 h4{
     text-align: center;
+    font-family: Cambria;
+    color:#5d0641
 };
 h6{
     text-align: center;
@@ -37,7 +39,7 @@ h6{
 }
 
 .logo {
-    color: #ff6600;
+    color: #810233;
     font-size: 1.7rem;
     font-weight: bold;
     text-decoration: none;
@@ -82,7 +84,7 @@ h6{
 .nav-menu > li > a:hover,
 .nav-menu > li.active > a {
     background: #f5f5f5;
-    color: #ff6600;
+    color: #810233;
 }
 
 /* Dropdown directly under the menu item */
@@ -188,4 +190,77 @@ h6{
 body {
     margin: 0;
     padding-top: 70px; /* Adjust this to your header height */
-} 
+    background-image: url('abstract-watercolor-background_23-2149059286.jpg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Optional: add a light overlay for readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.6);
+    pointer-events: none;
+    z-index: 0;
+}
+
+#app, .container, .row, .main-header, .col-md-4, .col-md-8 {
+    position: relative;
+    z-index: 1;
+}
+
+.left-flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.calorie-circle-container {
+    margin-right: 24px;
+}
+
+#productTable {
+    width: 220px;
+    background: #fff;
+    margin-top: 0 !important;
+}
+
+.table table-bordered mt-4{
+    width: 100%; 
+    background: #f2adad;
+    margin-bottom: 500px;
+    
+}
+
+.main-header {
+    text-align: center;
+    margin-top: -50px;
+    margin-bottom: 32px;
+}
+.main-header h1 {
+    font-family: Cambria, serif;
+    color: rgb(58, 2, 58);
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.main-header h4 {
+    margin-bottom: 8px;
+    color: #444;
+}
+.main-header h6 {
+    color: #666;
+    font-weight: normal;
+}
+
+.choose-meal-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #5d0641;
+    margin-left: 4px;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}

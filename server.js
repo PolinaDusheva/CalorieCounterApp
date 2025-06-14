@@ -210,6 +210,23 @@ app.get('/api/categories', async (req, res) => {
     }
 });
 
+// API endpoint to get today's total calories
+app.get('/api/daily-calories', async (req, res) => {
+    try {
+        await poolConnect;
+        const request = pool.request();
+        const result = await request.query(`
+            SELECT ISNULL(SUM(calories), 0) AS total_calories
+            FROM food_entries
+            WHERE CAST(created_at AS DATE) = CAST(GETDATE() AS DATE)
+        `);
+        res.json({ total_calories: result.recordset[0].total_calories });
+    } catch (error) {
+        console.error('Error fetching daily calories:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
 // Serve the calorie chart page
 app.get('/calorie-chart', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'calorie-chart.html'));

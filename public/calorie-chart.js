@@ -119,6 +119,16 @@ function displayChart() {
         row.appendChild(foodCell);
         row.appendChild(servingCell);
         row.appendChild(caloriesCell);
+        
+        // Add click event to send food name to home page
+        row.style.cursor = 'pointer';
+        row.title = 'Add to entry';
+        row.addEventListener('click', function() {
+            localStorage.setItem('selectedFood', item.food_name);
+            localStorage.setItem('selectedCalories', item.calories_per_serving);
+            window.location.href = '/';
+        });
+        
         tbody.appendChild(row);
     });
     
